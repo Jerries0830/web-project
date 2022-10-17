@@ -1,0 +1,5 @@
+FROM java:8
+VOLUME /tmp/tomcat
+ADD ./target/spring-boot-api-project-seed-1.0.jar springboot-docker.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/springboot-docker.jar"]
+
